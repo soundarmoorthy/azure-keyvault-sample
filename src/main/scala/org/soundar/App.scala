@@ -13,11 +13,11 @@ object App {
     val cred = new DefaultAzureCredentialBuilder().build()
 
     val keyVaultClient = new SecretClientBuilder()
-      .vaultUrl("https://key-vault-name.vault.azure.net/")
+      .vaultUrl(args(0))
       .credential(cred)
       .buildClient()
 
-    val result = keyVaultClient.getSecret("some-secret-name-in-vault")
+    val result = keyVaultClient.getSecret(args(1))
     println(result.getValue())
   }
 
