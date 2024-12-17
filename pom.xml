@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.soundar</groupId>
   <artifactId>azure-secrets-demo</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <name>${project.artifactId}</name>
   <description>Test Azure Key vault service</description>
   <inceptionYear>2024</inceptionYear>
@@ -27,6 +27,11 @@
       <groupId>org.scala-lang</groupId>
       <artifactId>scala-library</artifactId>
       <version>${scala.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.azure</groupId>
+      <artifactId>azure-core-http-netty</artifactId>
+      <version>1.12.4</version>
     </dependency>
 
     <!-- Test -->
